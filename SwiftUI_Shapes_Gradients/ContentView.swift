@@ -10,11 +10,13 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
+            RoundedRectangle(cornerRadius: 25.0)
+                .fill(
+//                    LinearGradient(colors: [Color.red, Color.blue], startPoint: .bottom, endPoint: .top)
+//                    RadialGradient(colors: [Color.red, Color.blue], center: .bottomLeading, startRadius: 9, endRadius: 250)
+                    AngularGradient(gradient: Gradient(colors: [Color.red, Color.blue]), center: .bottomTrailing, angle: .degrees(20 + 20))
+                )
+        }.frame(width: 300, height: 300)
         .padding()
     }
 }
